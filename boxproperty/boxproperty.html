@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOXPROPERTY</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            float: left;
+            margin: 30px;
+            border-radius: 0%;
+            background-color: blueviolet;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .maindivision {
+            margin: auto;
+            height: 400px;
+            width: 100%;
+            border: 2px solid gray;
+            margin-top: 50px;
+        }
+        
+        .innertext {
+            margin-top: 50px;
+            height: 40px;
+            width: 200px;
+            background-color: rgba(128, 128, 128, 0.137);
+            border: 1px solid gray;
+            text-align: center;
+            margin-left: 30px;
+        }
+        
+        #title {
+            margin-left: 30px;
+        }
+        
+        button {
+            height: 40px;
+            width: 150px;
+            background-color: darkcyan;
+            text-align: center;
+            color: white;
+            border: none;
+            margin-left: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maindivision">
+        <Input type="text" class="innertext" id="boxno"></Input>
+        <Input type="text" class="innertext" id="brradius"></Input>
+        <Input type="color" class="innertext" id="color"></Input>
+        <Input type="text" class="innertext" id="txt"></Input>
+        <button type="button" onclick="databtn()">ENTER</button>
+        <div class="box" id="box1">
+            <h1></h1>
+        </div>
+        <div class="box" id="box2">
+            <h1></h1>
+        </div>
+        <div class="box" id="box3">
+            <h1></h1>
+        </div>
+        <div class="box" id="box4">
+            <h1></h1>
+        </div>
+        <div class="box" id="box5">
+            <h1></h1>
+        </div>
+    </div>
+
+
+    <script>
+        function databtn() {
+            var data = document.getElementById("box" + document.getElementById("boxno").value);
+            data.style.borderRadius = document.getElementById("brradius").value;
+            data.style.backgroundColor = document.getElementById("color").value;
+            data.innerText = document.getElementById("txt").value;
+
+
+        }
+
+        function btnclick() {
+            let boxnum = document.getElementById("boxno").value;
+            let brradius = document.getElementById("brradius").value;
+            let boxcolor = document.getElementById("color").value;
+            let boxtxt = document.getElementById("txt");
+            let txt1 = document.getElementById("text1");
+            let txt2 = document.getElementById("text2");
+            let txt3 = document.getElementById("text3");
+            let txt4 = document.getElementById("text4");
+            let txt5 = document.getElementById("text5");
+
+
+            let box1 = document.getElementById("box1");
+            let box2 = document.getElementById("box2");
+            let box3 = document.getElementById("box3");
+            let box4 = document.getElementById("box4");
+            let box5 = document.getElementById("box5");
+
+
+            if (boxnum == "1") {
+                box1.style.borderRadius = brradius;
+                box1.style.backgroundColor = boxcolor;
+                txt1.innerText = boxtxt.value;
+
+
+            } else if (boxnum == "2") {
+                box2.style.borderRadius = brradius;
+                box2.style.backgroundColor = boxcolor;
+                txt2.innerText = boxtxt.value;
+
+
+            } else if (boxnum == "3") {
+                box3.style.borderRadius = brradius;
+                box3.style.backgroundColor = boxcolor;
+                txt3.innerText = boxtxt.value;
+
+
+            } else if (boxnum == "4") {
+                box4.style.borderRadius = brradius;
+                box4.style.backgroundColor = boxcolor;
+                txt4.innerText = boxtxt.value;
+
+
+            } else if (boxnum == "5") {
+                box5.style.borderRadius = brradius;
+                box5.style.backgroundColor = boxcolor;
+                txt5.innerText = boxtxt.value;
+
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
